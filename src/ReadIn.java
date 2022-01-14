@@ -9,7 +9,7 @@ import java.util.List;
 public class ReadIn {
     public static void readInStudents(String testcaseName) {
         try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(new File("src/TestCase1/Students_Info.txt")),
+            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(new File("src/"+testcaseName+"/Students_Info.txt")),
                     "UTF-8"));
             String lineTxt;
             while ((lineTxt = br.readLine()) != null) {
@@ -28,15 +28,20 @@ public class ReadIn {
 
     public static void readInCourses(String testcaseName) {
         try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(new File("src/TestCase1/Courses_Info.txt")),
+            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(new File("src/"+testcaseName+"/Courses_Info.txt")),
                     "UTF-8"));
             String lineTxt;
             while ((lineTxt = br.readLine()) != null) {
                 String[] strings = lineTxt.split(", ");
-                if(strings.length != 3){
+                if(strings.length < 3){
                     continue;
                 }
-                Course course = new Course(strings[0], strings[1], Integer.parseInt(strings[2]));
+                Course course = null;
+                if(strings.length == 3) {
+                    course = new Course(strings[0], strings[1], Integer.parseInt(strings[2]));
+                }else if(strings.length == 4) {
+                    course = new Course(strings[0], strings[1], Integer.parseInt(strings[2]), strings[3]);
+                }
                 GlobalObjects.courseMap.put(course.getCourseId(), course);
             }
             br.close();
@@ -47,7 +52,7 @@ public class ReadIn {
 
     public static void readInLearning(String testcaseName) {
         try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(new File("src/TestCase1/Learning.txt")),
+            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(new File("src/"+testcaseName+"/Learning.txt")),
                     "UTF-8"));
             String lineTxt;
             while ((lineTxt = br.readLine()) != null) {
@@ -74,7 +79,7 @@ public class ReadIn {
     public static void readInSchemas(String testcaseName, String schemaName) {
         Schema schema = new Schema(schemaName, new HashMap<>(), new HashMap<>());
         try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(new File("src/TestCase1/"+schemaName+".txt")),
+            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(new File("src/"+testcaseName+"/"+schemaName+".txt")),
                     "UTF-8"));
             String lineTxt;
             String lastModuleName = null;

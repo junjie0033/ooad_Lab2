@@ -1,11 +1,10 @@
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-public class main {
+public class main2 {
     public static void main(String[] args) {
-        String testcaseName = "TestCase1";
+        String testcaseName = "TestCase2";
         ReadIn.readInLearning(testcaseName);
 //        for (Map.Entry<String, List<String>> entry : GlobalObjects.learningMap.entrySet()) {
 //            System.out.println("key = " + entry.getKey() + ", value = " + entry.getValue());
@@ -27,6 +26,8 @@ public class main {
 //        for (Map.Entry<String, Schema> entry : GlobalObjects.schemaMap.entrySet()) {
 //            System.out.println("key = " + entry.getKey() + ", value = " + entry.getValue());
 //            Schema schema = entry.getValue();
+//
+//
 //            System.out.println(schema.getSchemaName());
 //            Map<String, List<String>> map = schema.getSchemaCourses();
 //            for (Map.Entry<String, List<String>> entry2 : map.entrySet()) {
@@ -37,7 +38,8 @@ public class main {
 //                }
 //            }
 //        }
-        Utils.getAns();
+        String direction = "Direction A";
+        Utils2.getAns(direction);
 
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNext()) {
@@ -48,12 +50,19 @@ public class main {
                 for (Student student: studentList) {
                     if(student.getName().equals(strings[1])) {
                         student.setMajor(strings[2]);
-                        Utils.getAns();
+                        Utils2.getAns(direction);
                     }
                  }
             } else if(strings[0].equals("readInSchema")) {
                 ReadIn.readInSchemas(testcaseName, strings[1]);
-                Utils.getAns();
+                Utils2.getAns(direction);
+            } else if(strings[0].equals("calc")) {
+                if(strings[1].equals("A")){
+                    direction = "Direction A";
+                } else if(strings[1].equals("B")) {
+                    direction = "Direction B";
+                }
+                Utils2.getAns(direction);
             }
         }
 
