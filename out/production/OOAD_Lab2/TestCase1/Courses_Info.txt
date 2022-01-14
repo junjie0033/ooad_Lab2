@@ -1,0 +1,41 @@
+PTSS001, Basic Principle of Marxism, 6
+PTSS002, Mao Zedong Thought, 8
+FORE001, College English 1, 2
+FORE002, College English 2, 2
+FORE003, College English 3, 2
+MATH001, Advanced Mathematics A, 4
+MATH002, Advanced Mathematics B, 4
+MATH003, Advanced Mathematics C, 4
+MATH004, Linear Algebra, 3
+MATH005, Probability Theory, 4
+PHYS001, College Physics A, 4
+PHYS002, College Physics B, 4
+PHYS003, College Physics C, 4
+COMP001, Data Structure, 3
+COMP002, Machine Learning, 3
+COMP003, C Programming, 3
+COMP004, C++ Programming, 3
+COMP005, Python Programming, 3
+COMP006, Java Programming, 3
+COMP007, Computer Network, 3
+COMP008, Computer Virus and Defense, 3
+COMP009, Operating System, 3
+CHIN010, Dream of the Red Chamber, 2
+CHIN011, Water Margin, 2
+CHIN012, Journey to the West, 2
+ECON010, Economy and Society, 2
+LAWS010, History of constitutional civilization, 2
+LAWS011, Law and Society, 2
+COMP010, Go Programming, 2
+COMP011, JavaScript Programming, 2
+COMP012, C# Programming, 2
+COMP013, Pascal Programming, 2
+COMP014, PHP Programming, 2
+COMP015, Deep Learning, 2
+COMP016, Reinforcement Learning, 2
+COMP017, Big Data, 2
+COMP018, Computer Vision, 2
+COMP019, How to be A Hacker, 2
+COMP020, How to be A Hacker: Advanced, 2
+COMP021, How to be A Hacker: Master, 2
+COMP022, TCP/IP, 2
